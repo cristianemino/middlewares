@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div(class="container expand")
+    div(class="")
+      block body
+        div
+          div(class="title") Analytics
+          table(class="table")
+            thead 
+              tr 
+                th(class="path") Path
+                th(class="visits") Visits
+            tbody 
+              each visit in visits
+                tr 
+                  td= visit.path
+                  td(class="visits")= visit.count
+
